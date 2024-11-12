@@ -2,7 +2,7 @@
 
 Welcome to the **INDOT Autonomous Mower Project**! This project is focused on developing an autonomous mowing system to assist in efficient and safe maintenance of roadside vegetation.
 
-![Project Banner](path/to/your/image.png) <!-- Optional: Add an image banner or logo here -->
+![Project Banner](Images/UE_vehicles.png) <!-- Optional: Add an image banner or logo here -->
 
 ---
 
