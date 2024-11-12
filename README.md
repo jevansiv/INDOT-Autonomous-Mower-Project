@@ -102,7 +102,7 @@ Examples:
 ## Results
 Here, you can detail the experimental results of your autonomous mower:
 
-- Summary of navigation performance
+- Mowing coverage performance
 - Obstacles avoided and accuracy of path-following
 - Safety result summary
 
