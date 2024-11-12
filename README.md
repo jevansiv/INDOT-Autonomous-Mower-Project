@@ -105,6 +105,7 @@ Here, you can detail the experimental results of your autonomous mower:
 - Mowing coverage performance
 - Obstacles avoided and accuracy of path-following
 - Safety result summary
+- Simulation to Real-World
 
 ## Contributing
 We welcome contributions! Please read our CONTRIBUTING.md for guidelines on submitting pull requests and issues.
