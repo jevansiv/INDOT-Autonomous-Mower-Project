@@ -104,7 +104,7 @@ Here, you can detail the experimental results of your autonomous mower:
 
 - Summary of navigation performance
 - Obstacles avoided and accuracy of path-following
-- Energy efficiency or runtime data
+- Safety result summary
 
 ## Contributing
 We welcome contributions! Please read our CONTRIBUTING.md for guidelines on submitting pull requests and issues.
