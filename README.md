@@ -26,7 +26,7 @@ The INDOT Autonomous Mower Project is designed to create an autonomous robotic p
 
 This README provides an overview of the project’s setup, configuration, and usage instructions for contributors and users.
 
-Additional documentation and details can be found in our following papers:
+**Additional documentation and details can be found in our following papers:**
 - Digital-twin environment generation
   - Mardikes, M., Evans, J., Brown, E., Sprague, N., Wiegman, T., & Shaver, G. (2024). *Constructing Digital-Twin Roadways for Testing and Evaluation of Autonomous Roadside Mowing Vehicles.* Unpublished manuscript.
 
@@ -68,43 +68,48 @@ Additional documentation and details can be found in our following papers:
   - oscar_ros **(NEED LINK AND REPO SETUP FOR HERE)**
   
 ## Usage
+### First Time Using Simulation
+To build the Unreal Engine project:
+  - Open the Unreal Engine project's workspace in vscode
+  - Identify and click-on the "Run and Debug" Tab (Left-Hand-Side)
+  - Navigate to the "RUN AND DEBUG" drop down menu at the top of the application and select "Generate Project Files (UE5)" from the item list
+  - Press the green arrow button to run the project generation
 ### Launching the Simulation
 To test in a simulated environment:
-
-- Launch the Unreal Engine Project's workspace in vscode
-- Select the map desired from the content browser
-- Implement the mowing vehicle into the environment if platform does not already exist in environment
+- **Launch the Unreal Engine Project in vscode**
+  - Use: Launch Test_Segment_1 Editor (DebugGame) (UE5)
+- **Select the map desired from the content browser**
+- **Implement the mowing vehicle into the environment if platform does not already exist in environment**
   - Set the autopossess player to player 0 from disabled if it is disabled
-- Play the simulated environment
-- Launch the external ros2 connection for the GPS sensor in a terminal:
+- **Play the simulated environment**
+- **Launch the external ros2 connection for the GPS sensor in a terminal:**
 ```
 source ~/oscar_ros/install/setup.bash
 ros2 launch oscar_ros launch_sim_gps.launch.py
 ```
-- Launch the external Nav2 controller in a terminal:
+- **Launch the external Nav2 controller in a terminal:**
 ```
 source ~/oscar_ros_ws/install/setup.bash
 cd ~/oscar_ros_ws/src/oscar_ros/config/sim
 ros2 launch nav2_bringup bringup_launch.py params_file:=./<nav2_param_yaml_file>.yaml map:=../../maps/<map_yaml_file>.yaml use_sim_time:= true
 ```
-An example launch commmand used for obstacle avoidance from files in oscar_ros package:
+  - An example launch commmand used for obstacle avoidance from files in oscar_ros package:
 ```
 ros2 launch nav2_bringup bringup_launch.py params_file:=./nav2_params_pcloud.yaml map:=../../maps/empty_map.yaml use_sim_time:= true
 ```
-- Launch RViz2 for visualized view of robot's inputs and outputs
+- **Launch RViz2 for visualized view of robot's inputs and outputs:**
 ```
 source ~/oscar_ros/install/setup.bash
 rviz2
 ```
-- (Optional) Send goal poses in RViz2
-- (Optional) Run external navigation to send goal poses in a terminal:
+  - (Optional) Send goal poses in RViz2
+- **(Optional) Run external navigation to send goal poses in a terminal:**
 ```
 source ~/oscar_ros_ws/install/setup.bash
 cd /<path_to_waypoint_publisher_file>
 python3 <waypoint_publisher_file>.py
 ```
-
-- Recording Data
+- **Recording Data**
   - To record a rosbag of sensor data:
 ```
 source ~/oscar_ros_ws/install/setup.bash
