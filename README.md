@@ -137,7 +137,7 @@ ros2 launch oscar_ros zed2i.launch.py
 - **Launch the robot configuration with GPS position estiamtion in a new terminal:**
 ```
 source ~/oscar_ros_ws/install/setup.bash
-ros2 launch oscar_ros robot.launch.py
+ros2 launch oscar_ros launch_robot.launch.py
 ```
 - **Launch the robot configuration with GPS position estiamtion in a new terminal:**
 ```
@@ -154,6 +154,30 @@ ros2 launch nav2_bringup bringup_launch.py params_file:=./<nav2_param_yaml_file>
 ```
 ros2 launch nav2_bringup bringup_launch.py params_file:=./nav2_params_pcloud.yaml map:=../../maps/empty_map.yaml use_sim_time:= true
 ```
+- **Launch the coupled sensors for obstacle avoidance in a terminal:**
+  - Launch ouster LiDAR demo command:
+```
+source ~/oscar_ros_ws/install/setup.bash
+ros2 launch oscar_ros ouster.launch.py
+```
+  - Launch OAK-D stereo demo command:
+```
+source ~/oscar_ros_ws/install/setup.bash
+ros2 launch oscar_ros oakd.launch.py
+```
+- **Launch RViz2 for visualized view of robot's inputs and outputs:**
+```
+source ~/oscar_ros/install/setup.bash
+rviz2
+```
+  - (Optional) Send goal poses in RViz2
+- **(Optional) Run external navigation to send goal poses in a terminal:**
+```
+source ~/oscar_ros_ws/install/setup.bash
+cd /<path_to_waypoint_publisher_file>
+python3 <waypoint_publisher_file>.py
+```
+
 - **Record Data**
   - To record a rosbag of sensor data:
 ```
@@ -162,17 +186,23 @@ ros2 bag record --all
 ```
 
 ## Project Structure
-**src:** Contains the main ROS2 packages for navigation, perception, and control.
+**Unreal Project:** Contains virtual environments, vehicle models, and sensors for developing navigation methods in specific environments and scenarios.
+
+**oscar_ros:** Contains navigation, perception, and control ROS2 launch scripts and interface scripts for the autonomous mower.
+
+**Scripts:** Contains additional supplement scripts for filtering data entries to navigation, such as limiting data inputs to a specified region in the field-of-view of a sensor.
+
+<!-- **src:** Contains the main ROS2 packages for navigation, perception, and control.
 launch: Launch files for simulation and real-world deployment.
 config: Configuration files for sensors, navigation parameters, and tuning.
 data: Folder for collected datasets, logs, and ROS2 bag files.
-scripts: Utility scripts for data processing, analysis, and configuration setup.
+scripts: Utility scripts for data processing, analysis, and configuration setup.-->
 
 ## Data Collection
 This project includes modules for recording sensor data:
 
 **ROS2 Bag:** Record all relevant topics, excluding unnecessary topics.
-**CSV Logging:** Logs GPS, IMU, and LiDAR data in CSV format for post-analysis.
+**CSV Logging:** Logs GPS, terrain, road entries, and collisions in CSV format for post-analysis.
 
 ## Configuration
 Adjust the parameters in the config/ directory to fine-tune navigation, sensor thresholds, and control parameters.
