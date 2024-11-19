@@ -1,6 +1,6 @@
-# INDOT-Autonomous-Mower-Project
+# ROWMow Sim: INDOT-Autonomous-Mower-Project
 
-Welcome to the **INDOT Autonomous Mower Project**! This project is focused on developing an autonomous mowing system to assist in efficient and safe maintenance of roadside vegetation.
+Welcome to the **ROWMow Sim**! This project is focused on developing an autonomous mowing system to assist in efficient and safe maintenance of roadside vegetation.
 
 ![Project Banner](Images/UE_vehicles.png) <!-- Optional: Add an image banner or logo here -->
 
