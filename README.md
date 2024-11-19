@@ -1,6 +1,6 @@
 # ROWMow Sim: INDOT-Autonomous-Mower-Project
 
-Welcome to the **ROWMow Sim**! This project is focused on developing an autonomous mowing system to assist in efficient and safe maintenance of roadside vegetation.
+Welcome to the **ROWMow Sim**! This project is focused on developing an autonomous mowing system to assist in efficient and safe maintenance of roadside vegetation. The work was funded by Indiana Department of Transportation through the Joint Transportation Research Program and targeted to Indiana roadways for vegetation management.
 
 ![Project Banner](Images/UE_vehicles.png) <!-- Optional: Add an image banner or logo here -->
 
@@ -25,6 +25,15 @@ Welcome to the **ROWMow Sim**! This project is focused on developing an autonomo
 The INDOT Autonomous Mower Project is designed to create an autonomous robotic platform capable of safely and efficiently mowing designated roadside areas. This project uses a combination of **ROS2**, **Unreal Engine**, and **TerraForm Pro** to develop digital-twin roadsides for mowing navigation along a coverage region and obstacle avoidance.
 
 This README provides an overview of the project’s setup, configuration, and usage instructions for contributors and users.
+
+Additional documentation and details can be found in our following papers:
+- Digital-twin environment generation
+  - Mardikes, M., Evans, J., Brown, E., Sprague, N., Wiegman, T., & Shaver, G. (2024). *Constructing Digital-Twin Roadways for Testing and Evaluation of Autonomous Roadside Mowing Vehicles.* Unpublished manuscript.
+
+- ROWMow Sim vehicle configurations and sim2real testing (Nav2 navigation)
+  - Mardikes, M., Evans, J., Brown, E., Sprague, N., Wiegman, T., Supe, S., & Shaver, G. (2024). *ROWMow Sim: A Digital-Twin Robotic Simulator for Testing Autonomous Roadside Mowers.* Unpublished manuscript.
+
+- Reinforcement learning based navigation and obstacle avoidance
 
 ## Project Goals
 - **Real-World Testsites**: Generate real-world locations for simulation testing to target improvements to sim2real transfers.
