@@ -45,7 +45,8 @@ This README provides an overview of the project’s setup, configuration, and us
 ## Installation
 
 ### Prerequisites
-- [ROS2](https://docs.ros.org/en/galactic/index.html) (Recommended Distro: Humble)
+- Minimum 100 GB of available storage on SSD
+- [ROS2](https://docs.ros.org/en/galactic/index.html) (Recommended Distro from rclUE plugin: Humble)
 - Python 3.8+
 - CMake
 - Dependencies:
@@ -55,28 +56,48 @@ This README provides an overview of the project’s setup, configuration, and us
   - [rclUE](https://github.com/rapyuta-robotics/rclUE/tree/UE5_devel_humble)
   - [RapyutaSimulationPlugins](https://github.com/rapyuta-robotics/RapyutaSimulationPlugins/tree/devel)
   - [Fields2Cover](https://github.com/Fields2Cover/Fields2Cover)
-  - 
+  - oscar_ros **(NEED LINK AND REPO SETUP FOR HERE)**
   
 ## Usage
-Launching the Simulation
+### Launching the Simulation
 To test in a simulated environment:
 
+- Launch the Unreal Engine Project's workspace in vscode
+- Select the map desired from the content browser
+- Implement the mowing vehicle into the environment if platform does not already exist in environment
+  - Set the autopossess player to player 0 from disabled if it is disabled
+- Play the simulated environment
+- Launch the external ros2 connection for the GPS sensor in a terminal:
 ```
-ros2 launch indot_mower simulation.launch.py
+source ~/oscar_ros/install/setup.bash
+ros2 launch oscar_ros launch_sim_gps.launch.py
+```
+- Launch the external Nav2 controller in a terminal:
+```
+source ~/oscar_ros_ws/install/setup.bash
+cd ~/oscar_ros_ws/src/oscar_ros/config/sim
+ros2 launch nav2_bringup bringup_launch.py params_file:=./<nav2_param_yaml_file>.yaml map:=../../maps/<map_yaml_file>.yaml use_sim_time:= true
 ```
 
-Running the Autonomous Mower
-For real-world deployment:
-
+An example launch commmand used for obstacle avoidance from files in oscar_ros package:
 ```
-ros2 launch indot_mower mower.launch.py
+ros2 launch nav2_bringup bringup_launch.py params_file:=./nav2_params_pcloud.yaml map:=../../maps/empty_map.yaml use_sim_time:= true
 ```
 
 Recording Data
-To record relevant data (excluding unnecessary topics):
+- To record a rosbag of sensor data:
+```
+source ~/oscar_ros_ws/install/setup.bash
+ros2 bag record --all
+```
+- To record simulation data:
+  - Ensure you are the active as the player in Unreal Engine, F8 to change between, and press "R" on the keyboard.
+    - A printout statement confirming that data has been generated should appear on the screen
+   
+### Real-world deployment:
 
 ```
-ros2 bag record --all
+ros2 launch indot_mower mower.launch.py
 ```
 
 ## Project Structure
