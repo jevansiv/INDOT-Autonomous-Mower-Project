@@ -68,13 +68,13 @@ This README provides an overview of the project’s setup, configuration, and us
   - oscar_ros **(NEED LINK AND REPO SETUP FOR HERE)**
   
 ## Usage
-### First Time Using Simulation
+### First Time Using Simulation:
 To build the Unreal Engine project:
   - Open the Unreal Engine project's workspace in vscode
   - Identify and click-on the "Run and Debug" Tab (Left-Hand-Side)
   - Navigate to the "RUN AND DEBUG" drop down menu at the top of the application and select "Generate Project Files (UE5)" from the item list
   - Press the green arrow button to run the project generation
-### Launching the Simulation
+### Launching the Simulation (Example Demonstrations with OSCAR Platform):
 To test in a simulated environment:
 - **Launch the Unreal Engine Project in vscode**
   - Use: Launch Test_Segment_1 Editor (DebugGame) (UE5)
@@ -119,10 +119,46 @@ ros2 bag record --all
     - Ensure you are the active as the player in Unreal Engine, F8 to change between, and press "R" on the keyboard.
       - A printout statement confirming that data has been generated should appear on the screen
    
-### Real-world deployment:
+### Real-world deployment (Example Demonstrations with OSCAR Platform):
+Testing the virtual model developments in the real-world:
+- **First Time Use:**
+  - **Have a physical model of the vehicle ready**
+    - Includes any necessary hardware components and sensors to perform the necessary inputs and outputs for navigation
+    - **Note:** Depending on your onboard computing hardware, you may find some of the desired sample rates are too high
+    - **Note:** Verify that all orientations for commands match platform if this was not verified for the virtual model development
+      - Always good to double check as well! 
+  - **Install the navigation package for the robot onto the onboard computer** (i.e., oscar_ros)
 
+- **Launch the IMU in a new terminal (ZED IMU used):**
 ```
-ros2 launch indot_mower mower.launch.py
+source ~/oscar_ros_ws/install/setup.bash
+ros2 launch oscar_ros zed2i.launch.py
+```
+- **Launch the robot configuration with GPS position estiamtion in a new terminal:**
+```
+source ~/oscar_ros_ws/install/setup.bash
+ros2 launch oscar_ros robot.launch.py
+```
+- **Launch the robot configuration with GPS position estiamtion in a new terminal:**
+```
+source ~/oscar_ros_ws/install/setup.bash
+ros2 launch oscar_ros robot.launch.py
+```
+- **Launch the external Nav2 controller in a terminal:**
+```
+source ~/oscar_ros_ws/install/setup.bash
+cd ~/oscar_ros_ws/src/oscar_ros/config/sim
+ros2 launch nav2_bringup bringup_launch.py params_file:=./<nav2_param_yaml_file>.yaml map:=../../maps/<map_yaml_file>.yaml use_sim_time:= true
+```
+  - An example launch commmand used for obstacle avoidance from files in oscar_ros package:
+```
+ros2 launch nav2_bringup bringup_launch.py params_file:=./nav2_params_pcloud.yaml map:=../../maps/empty_map.yaml use_sim_time:= true
+```
+- **Record Data**
+  - To record a rosbag of sensor data:
+```
+source ~/oscar_ros_ws/install/setup.bash
+ros2 bag record --all
 ```
 
 ## Project Structure
