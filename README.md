@@ -45,7 +45,7 @@ This README provides an overview of the project’s setup, configuration, and us
 ## Installation
 
 ### Prerequisites
-- Minimum 100 GB of available storage on SSD
+- Minimum 75 GB of available storage on SSD
 - [ROS2](https://docs.ros.org/en/galactic/index.html) (Recommended Distro from rclUE plugin: Humble)
 - Python 3.8+
 - CMake
@@ -78,21 +78,32 @@ source ~/oscar_ros_ws/install/setup.bash
 cd ~/oscar_ros_ws/src/oscar_ros/config/sim
 ros2 launch nav2_bringup bringup_launch.py params_file:=./<nav2_param_yaml_file>.yaml map:=../../maps/<map_yaml_file>.yaml use_sim_time:= true
 ```
-
 An example launch commmand used for obstacle avoidance from files in oscar_ros package:
 ```
 ros2 launch nav2_bringup bringup_launch.py params_file:=./nav2_params_pcloud.yaml map:=../../maps/empty_map.yaml use_sim_time:= true
 ```
+- Launch RViz2 for visualized view of robot's inputs and outputs
+```
+source ~/oscar_ros/install/setup.bash
+rviz2
+```
+- (Optional) Send goal poses in RViz2
+- (Optional) Run external navigation to send goal poses in a terminal:
+```
+source ~/oscar_ros_ws/install/setup.bash
+cd /<path_to_waypoint_publisher_file>
+python3 <waypoint_publisher_file>.py
+```
 
-Recording Data
-- To record a rosbag of sensor data:
+- Recording Data
+  - To record a rosbag of sensor data:
 ```
 source ~/oscar_ros_ws/install/setup.bash
 ros2 bag record --all
 ```
-- To record simulation data:
-  - Ensure you are the active as the player in Unreal Engine, F8 to change between, and press "R" on the keyboard.
-    - A printout statement confirming that data has been generated should appear on the screen
+  - To record simulation data at end of test:
+    - Ensure you are the active as the player in Unreal Engine, F8 to change between, and press "R" on the keyboard.
+      - A printout statement confirming that data has been generated should appear on the screen
    
 ### Real-world deployment:
 
