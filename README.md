@@ -22,22 +22,23 @@ Welcome to the **INDOT Autonomous Mower Project**! This project is focused on de
 ---
 
 ## Overview
-The INDOT Autonomous Mower Project is designed to create an autonomous robotic platform capable of safely and efficiently mowing designated roadside areas. This project uses a combination of **ROS2**, **computer vision**, **GPS**, **IMU**, and **LiDAR** technologies for navigation and obstacle avoidance.
+The INDOT Autonomous Mower Project is designed to create an autonomous robotic platform capable of safely and efficiently mowing designated roadside areas. This project uses a combination of **ROS2**, **Unreal Engine**, and **TerraForm Pro** to develop digital-twin roadsides for mowing navigation along a coverage region and obstacle avoidance.
 
 This README provides an overview of the project’s setup, configuration, and usage instructions for contributors and users.
 
 ## Project Goals
-- **Autonomous Navigation**: Enable the mower to navigate complex outdoor environments using GPS, IMU, and LiDAR.
-- **Obstacle Detection**: Implement obstacle detection and avoidance to ensure safety.
+- **Real-World Testsites**: Generate real-world locations for simulation testing to target improvements to sim2real transfers.
+- **Autonomous Navigation**: Enable autonomous mower research to navigate roadsides using GPS, IMU, and a coupled obstacle detection sensor.
+- **Obstacle Detection**: Implement obstacle detection methods with an advanced sensor suite.
 - **Data Logging**: Record sensor data for analysis and continuous improvement.
-- **Environment Mapping**: Develop high-accuracy maps to assist in path planning and navigation.
-- **Energy Efficiency**: Optimize the system to operate efficiently and extend battery life.
+- **Safety Analysis**: Develop safety report from recorded sensor data for analysis by developers.
+- **Vehicle Configuration**: Optimize the system based on a developer's vehicle, software, and sensors for maximizing mowing efficiency and safety.
 
 ## Features
-- **Real-time Navigation**: Uses **Nav2** for autonomous path planning and obstacle avoidance.
-- **Sensor Fusion**: Combines data from **GPS**, **IMU**, **LiDAR**, and **radar** for accurate positioning and navigation.
+- **Real-time Navigation**: Uses custom user developed **Nav2** or **RL** methods for autonomous path planning and obstacle avoidance.
+- **Sensor Fusion**: Combines data from sensors for positioning and navigation with adjustable sampling rates and noise.
 - **Data Recording**: Logs relevant data for later analysis and debugging.
-- **Simulation Support**: Offers Gazebo simulation for development and testing in a virtual environment.
+- **Simulation Support**: Offers a high-fidelity Unreal Engine 5.1 simulation for development and testing of vegetation management platforms in a virtual environment.
 
 ---
 
