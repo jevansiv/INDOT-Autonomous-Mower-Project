@@ -34,6 +34,7 @@ This README provides an overview of the project’s setup, configuration, and us
   - Mardikes, M., Evans, J., Brown, E., Sprague, N., Wiegman, T., Supe, S., & Shaver, G. (2024). *ROWMow Sim: A Digital-Twin Robotic Simulator for Testing Autonomous Roadside Mowers.* Unpublished manuscript.
 
 - Reinforcement learning based navigation and obstacle avoidance
+- Data informatics for environment generation
 
 ## Project Goals
 - **Real-World Testsites**: Generate real-world locations for simulation testing to target improvements to sim2real transfers.
