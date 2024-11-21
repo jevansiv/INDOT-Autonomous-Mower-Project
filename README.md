@@ -13,6 +13,9 @@ Welcome to the **ROWMow Sim**! This project is focused on developing an autonomo
 - [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
+- [Custom Environment Setup](#custom-environment)
+- [Custom Vehicle Setup](#custom-vehicle)
+- [Sensor Setup](#sensor-setup)
 - [Data Collection](#data-collection)
 - [Configuration](#configuration)
 - [Results](#results)
@@ -186,11 +189,11 @@ ros2 bag record --all
 ```
 
 ## Project Structure
-**Unreal Project:** Contains virtual environments, vehicle models, and sensors for developing navigation methods in specific environments and scenarios.
+**Unreal Project:** Contains virtual environments, vehicle models, and sensors for developing navigation methods in specific environments and scenarios. This is where your testbed can be augmented for evaluating a vehicle's autonomy to safely navigate within a desired mowing coverage region. Vehicle models include the Evans' lab open-source connected autonomous rover (OSCAR) and RC Mower TK-44E build. Developer's can model and import their own vehicles to this project.
 
-**oscar_ros:** Contains navigation, perception, and control ROS2 launch scripts and interface scripts for the autonomous mower.
+**oscar_ros:** Contains navigation, perception, and control ROS2 launch scripts and interface scripts for the autonomous mower. This is an example of what a navigation software stack will be like (e.g., Nav2) that is provided for the open-source connected autonomous rover (OSCAR). Developers can model off of this structure for their own robot platforms.
 
-**Scripts:** Contains additional supplement scripts for filtering data entries to navigation, such as limiting data inputs to a specified region in the field-of-view of a sensor.
+**Scripts:** Contains additional supplement scripts for filtering data entries to navigation, such as limiting data inputs to a specified region in the field-of-view of a sensor. These scripts are dependent on the autonomy setups for your navigation package, will vary to your own work.
 
 <!-- **src:** Contains the main ROS2 packages for navigation, perception, and control.
 launch: Launch files for simulation and real-world deployment.
@@ -198,16 +201,28 @@ config: Configuration files for sensors, navigation parameters, and tuning.
 data: Folder for collected datasets, logs, and ROS2 bag files.
 scripts: Utility scripts for data processing, analysis, and configuration setup.-->
 
+## Custom Environment Setup
+A digital twin environment can be generated with:
+  - [TerraForm Pro](https://www.terraformpro.com/)
+  - [Cesium ion](https://cesium.com/platform/cesium-ion/)
+  - [Point clouds](https://dev.epicgames.com/documentation/en-us/unreal-engine/lidar-point-cloud-plugin-quick-start-guide-in-unreal-engine)
+## Custom Vehicle Setup
+A custom vehicle can be imported and configured in ROWMow Sim. To do this, the following steps must be performed.
+- Produce a CAD (or virtual) model of the vehicle
+- Import the model into [Blender](https://www.blender.org/)
+- Rig your vehicle with the bones and proper orientation (Here is an example [tutorial](https://www.youtube.com/watch?v=loRhQn1zwpE))
+- Export vehicle as FBX from Blender and import vehicle as FBX to Unreal Engine
+- Set vehicle physics in Unreal Engine
+- Copy over ROS2 configuration blueprint details from OSCAR or other developed platform
+
+## Sensor Setup
+
+
 ## Data Collection
 This project includes modules for recording sensor data:
 
 **ROS2 Bag:** Record all relevant topics, excluding unnecessary topics.
 **CSV Logging:** Logs GPS, terrain, road entries, and collisions in CSV format for post-analysis.
-
-## Configuration
-Adjust the parameters in the config/ directory to fine-tune navigation, sensor thresholds, and control parameters.
-
-Examples:
 
 **GPS Configuration:** Set parameters such as update frequency and accuracy.
 **LiDAR Filtering:** Configure point cloud filtering based on range and intensity.
