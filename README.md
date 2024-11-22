@@ -69,7 +69,13 @@ This README provides an overview of the project’s setup, configuration, and us
   - [RapyutaSimulationPlugins](https://github.com/rapyuta-robotics/RapyutaSimulationPlugins/tree/devel)
   - [Fields2Cover](https://github.com/Fields2Cover/Fields2Cover)
   - oscar_ros **(NEED LINK AND REPO SETUP FOR HERE)**
-  
+
+### Recommended Installs
+The following are recommended Marketplace assets for advanced vehicle configurations and environment fidelity.
+- [Advanced Vehicle System](https://www.fab.com/listings/e1457ad1-297b-4a70-aecb-5c6716d9494f)
+- [TerraForm Pro](https://www.terraformpro.com/)
+- [Cesium](https://www.fab.com/listings/76c295fe-0dc6-4fd6-8319-e9833be427cd)
+
 ## Usage
 ### First Time Using Simulation:
 To build the Unreal Engine project:
