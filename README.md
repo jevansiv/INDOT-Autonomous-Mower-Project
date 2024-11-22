@@ -1,4 +1,4 @@
-# ROWMow Sim: INDOT-Autonomous-Mower-Project
+# ROWMow Sim: Digital-Twin Autonomous Roadside Mowing Simulator
 
 Welcome to the **ROWMow Sim**! This project is focused on developing an autonomous mowing system to assist in efficient and safe maintenance of roadside vegetation. The work was funded by Indiana Department of Transportation through the Joint Transportation Research Program and targeted to Indiana roadways for vegetation management.
 
