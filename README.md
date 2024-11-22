@@ -1,10 +1,20 @@
 # ROWMow Sim: Digital-Twin Autonomous Roadside Mowing Simulator
 
-Welcome to the **ROWMow Sim**! This project is focused on developing an autonomous mowing system to assist in efficient and safe maintenance of roadside vegetation. The work was funded by Indiana Department of Transportation through the Joint Transportation Research Program and targeted to Indiana roadways for vegetation management.
+Welcome to the **ROWMow Sim**! This project targets development of autonomous mowing system to assist in efficient and safe maintenance of roadside vegetation. The work was funded by Indiana Department of Transportation through the Joint Transportation Research Program and targeted to Indiana roadways for vegetation management.
 
 ![Project Banner](Images/UE_vehicles.png) <!-- Optional: Add an image banner or logo here -->
 
 ---
+## Disclaimer
+Per [Fab licensing documentation](https://www.fab.com/eula), distribution must go through communications for collaborators to utilize content in good faith. Contacts for communications are as follows:
+- Owner: John Evans - jevansiv@purdue.edu
+- Owner: Matt Kraushar - mkraushar@indot.in.gov
+- Developer: Michael Mardikes - mmardike@purdue.edu
+- Developer: Ethan Brown - brow1633@purdue.edu
+
+
+  5(a): **Sharing of Content**. Under a Standard License, you may not Distribute Content on a standalone basis to third parties except to your collaborators (either directly or through a third-party repository) who are utilizing the Content in good faith to develop a Project with you or on your behalf. This means, for example, that you may share Content with your employees, affiliates, and contractors in a private online repository while you work on a Project together. Those collaborators you share Content with are not permitted to further Distribute the Content (including as incorporated in a Project) and must delete the Content once it is no longer needed for developing a Project with you or on your behalf. You are responsible for ensuring that any third parties you share Content with comply with the terms of this Agreement. You are solely liable for any violation of this Agreement by collaborators with respect to any Content you share. 
+
 
 ## Table of Contents
 - [Overview](#overview)
@@ -75,6 +85,7 @@ The following are recommended Marketplace assets for advanced vehicle configurat
 - [Advanced Vehicle System](https://www.fab.com/listings/e1457ad1-297b-4a70-aecb-5c6716d9494f)
 - [TerraForm Pro](https://www.terraformpro.com/)
 - [Cesium](https://www.fab.com/listings/76c295fe-0dc6-4fd6-8319-e9833be427cd)
+- [Megascans]()
 
 ## Usage
 ### First Time Using Simulation:
