@@ -232,6 +232,8 @@ Sensors are blueprints in the content browser that can be pulled into the vehicl
  - Radar
  - LiDAR
 
+![Sensor List Image](Images/Sensor_Samples.png)
+
 ## Data Collection
 This project includes modules for recording sensor data:
 
