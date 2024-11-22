@@ -272,14 +272,11 @@ Here, you can detail the experimental results of your autonomous mower:
 A safety report summary example can be observed in Files/Supplement_Material.docx as supplement material S2.
 
 ## Contributing
-We welcome contributions! Please read our CONTRIBUTING.md for guidelines on submitting pull requests and issues.
+We welcome contributions! To become a contributor with the full ROWMow Sim package, please contact one of the individuals listed in the [disclaimer](#disclaimer). Contributors must become collaborators for access to the full version, which provides access to all assets and models in the environment. Open contribution from third-parties is not permitted due to Fab's Standard Licensing agreement.
 
 ## Reporting Issues
-If you encounter any issues, feel free to open a GitHub Issue.
+If you encounter any issues, feel free to open a GitHub Issue on our private GitHub Repository.
 
 ## Code of Conduct
-Please adhere to our Code of Conduct when interacting with others on this project.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+Collaborators are not allowed to distribute this project to third-parties and may not export models that were provided from Fab, Unreal Engine Marketplace, and Quixel Megascans for external productions.
 
