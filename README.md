@@ -203,12 +203,14 @@ scripts: Utility scripts for data processing, analysis, and configuration setup.
 
 ## Custom Environment Setup
 ![Custom Environment Image](Images/Digital_Twin_Example.png)
+
 A digital twin environment can be generated with:
   - [TerraForm Pro](https://www.terraformpro.com/)
   - [Cesium ion](https://cesium.com/platform/cesium-ion/)
   - [Point clouds](https://dev.epicgames.com/documentation/en-us/unreal-engine/lidar-point-cloud-plugin-quick-start-guide-in-unreal-engine)
 ## Custom Vehicle Setup
 ![Custom Vehicle Image](Images/vehicles_side_road.png)
+
 A custom vehicle can be imported and configured in ROWMow Sim. To do this, the following steps must be performed.
 - Produce a CAD (or virtual) model of the vehicle
 - Import the model into [Blender](https://www.blender.org/)
