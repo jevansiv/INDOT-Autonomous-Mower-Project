@@ -214,6 +214,9 @@ A digital twin environment can be generated with:
   - [TerraForm Pro](https://www.terraformpro.com/)
   - [Cesium ion](https://cesium.com/platform/cesium-ion/)
   - [Point clouds](https://dev.epicgames.com/documentation/en-us/unreal-engine/lidar-point-cloud-plugin-quick-start-guide-in-unreal-engine)
+
+**Note:** Custom environment noise can be added by animals (e.g., [Animal Variety Pack](https://www.fab.com/listings/2dd7964c-a601-4264-a53d-465dcae1644c)) and neighboring vehicles traveling on the road (e.g., [Vehicle Variety Pack](https://www.fab.com/listings/dc1ada50-2523-44b1-b0e2-a72d14076fb4)).
+
 ## Custom Vehicle Setup
 ![Custom Vehicle Image](Images/vehicles_side_road.png)
 
