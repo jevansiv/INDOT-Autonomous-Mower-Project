@@ -202,6 +202,7 @@ data: Folder for collected datasets, logs, and ROS2 bag files.
 scripts: Utility scripts for data processing, analysis, and configuration setup.-->
 
 ## Custom Environment Setup
+![Custom Environment Image](Images/Digital_Twin_Example.png)
 A digital twin environment can be generated with:
   - [TerraForm Pro](https://www.terraformpro.com/)
   - [Cesium ion](https://cesium.com/platform/cesium-ion/)
