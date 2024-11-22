@@ -225,6 +225,8 @@ A custom vehicle can be imported and configured in ROWMow Sim. To do this, the f
 - Set vehicle physics in Unreal Engine
 - Copy over ROS2 configuration blueprint details from OSCAR or other developed platform
 
+**Note:** Advanced models (e.g., tractor with flex-wing mower) require [Advanced Vehicle System](https://www.fab.com/listings/e1457ad1-297b-4a70-aecb-5c6716d9494f) plugin.
+
 ## Sensor Setup
 Sensors are blueprints in the content browser that can be pulled into the vehicle and configured in the vehicle's blueprint for ROS2 configuration. OSCAS's blueprint can be used for reference to develop custom configurations. These sensors were developed upon [rclUE](https://github.com/rapyuta-robotics/rclUE/tree/UE5_devel_humble) and [RapyutaSimulationPlugins](https://github.com/rapyuta-robotics/RapyutaSimulationPlugins/tree/devel) with added sensor types and noise modeling.
 
