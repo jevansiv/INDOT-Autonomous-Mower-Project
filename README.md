@@ -9,6 +9,7 @@ Welcome to the **ROWMow Sim**! This project targets development of autonomous mo
 Per [Fab licensing documentation](https://www.fab.com/eula), distribution must go through communications for collaborators to utilize content in good faith. Contacts for communications are as follows:
 - Owner: John Evans - jevansiv@purdue.edu
 - Owner: Matt Kraushar - mkraushar@indot.in.gov
+- Owner: Greg Shaver - gshaver@purdue.edu
 - Developer: Michael Mardikes - mmardike@purdue.edu
 - Developer: Ethan Brown - brow1633@purdue.edu
 
