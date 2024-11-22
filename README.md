@@ -13,8 +13,8 @@ Welcome to the **ROWMow Sim**! This project is focused on developing an autonomo
 - [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
-- [Custom Environment Setup](#custom-environment)
-- [Custom Vehicle Setup](#custom-vehicle)
+- [Custom Environment Setup](#custom-environment-setup)
+- [Custom Vehicle Setup](#custom-vehicle-setup)
 - [Sensor Setup](#sensor-setup)
 - [Data Collection](#data-collection)
 - [Configuration](#configuration)
@@ -216,7 +216,17 @@ A custom vehicle can be imported and configured in ROWMow Sim. To do this, the f
 - Copy over ROS2 configuration blueprint details from OSCAR or other developed platform
 
 ## Sensor Setup
+Sensors are blueprints in the content browser that can be pulled into the vehicle and configured in the vehicle's blueprint for ROS2 configuration. OSCAS's blueprint can be used for reference to develop custom configurations. These sensors were developed upon [rclUE](https://github.com/rapyuta-robotics/rclUE/tree/UE5_devel_humble) and [RapyutaSimulationPlugins](https://github.com/rapyuta-robotics/RapyutaSimulationPlugins/tree/devel) with added sensor types and noise modeling.
 
+### Sensor options:
+ - GPS
+ - IMU
+ - RGB Camera
+ - Depth Camera
+ - FLIR Camera
+ - Ultrasonic
+ - Radar
+ - LiDAR
 
 ## Data Collection
 This project includes modules for recording sensor data:
