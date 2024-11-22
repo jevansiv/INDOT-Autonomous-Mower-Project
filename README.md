@@ -63,8 +63,6 @@ This README provides an overview of the project’s setup, configuration, and us
 - **Data Recording**: Logs relevant data for later analysis and debugging.
 - **Simulation Support**: Offers a high-fidelity Unreal Engine 5.1 simulation for development and testing of vegetation management platforms in a virtual environment.
 
----
-
 ## Installation
 
 ### Prerequisites
