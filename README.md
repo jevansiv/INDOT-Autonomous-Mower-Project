@@ -16,7 +16,7 @@ Contacts for communications are as follows:
 - Owner: Greg Shaver - gshaver@purdue.edu
 - Developer: Michael Mardikes - mmardike@purdue.edu
 - Developer: Ethan Brown - brow1633@purdue.edu
-
+---
 ## Table of Contents
 - [Overview](#overview)
 - [Project Goals](#project-goals)
