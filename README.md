@@ -237,11 +237,8 @@ Sensors are blueprints in the content browser that can be pulled into the vehicl
 ## Data Collection
 This project includes modules for recording sensor data:
 
-**ROS2 Bag:** Record all relevant topics, excluding unnecessary topics.
-**CSV Logging:** Logs GPS, terrain, road entries, and collisions in CSV format for post-analysis.
-
-**GPS Configuration:** Set parameters such as update frequency and accuracy.
-**LiDAR Filtering:** Configure point cloud filtering based on range and intensity.
+- **ROS2 Bag:** Record all relevant topics, excluding unnecessary topics.
+- **CSV Logging:** Logs GPS, terrain, road entries, and collisions in CSV format for post-analysis.
 
 ## Results
 Here, you can detail the experimental results of your autonomous mower:
@@ -249,7 +246,9 @@ Here, you can detail the experimental results of your autonomous mower:
 - Mowing coverage performance
 - Obstacles avoided and accuracy of path-following
 - Safety result summary
-- Simulation to Real-World
+- Sim2real transfer
+
+A safety report summary example can be observed in Files/Supplement_Material.docx as supplement material S2.
 
 ## Contributing
 We welcome contributions! Please read our CONTRIBUTING.md for guidelines on submitting pull requests and issues.
