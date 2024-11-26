@@ -226,6 +226,7 @@ ros2 bag record --all
 ```
 
 #### Running RL
+To be added.
 
 ## Project Structure
 **Unreal Project:** Contains virtual environments, vehicle models, and sensors for developing navigation methods in specific environments and scenarios. This is where your testbed can be augmented for evaluating a vehicle's autonomy to safely navigate within a desired mowing coverage region. Vehicle models include the Evans' lab open-source connected autonomous rover (OSCAR) and RC Mower TK-44E build. Developer's can model and import their own vehicles to this project.
@@ -295,7 +296,7 @@ Here, you can detail the experimental results of your autonomous mower:
 A safety report summary example can be observed in Files/Supplement_Material.docx as supplement material S2.
 
 ## Contributing
-We welcome contributions! To become a contributor with the full ROWMow Sim package, please contact one of the individuals listed in the [disclaimer](#disclaimer). Contributors must become collaborators for access to the full version, which provides access to all assets and models in the environment. Open contribution from third-parties is not permitted due to Fab's Standard Licensing agreement.
+We welcome contributions! To become a collaborator with the full ROWMow Sim package, please contact one of the individuals listed in the [disclaimer](#disclaimer). Only collaborators are able to receive access to the full version. Open contribution from third-parties is not permitted due to Fab's [EULA](https://www.fab.com/eula).
 
 ## Reporting Issues
 If you encounter any issues, feel free to open a GitHub Issue on our private GitHub Repository.
