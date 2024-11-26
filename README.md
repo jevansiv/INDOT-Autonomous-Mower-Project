@@ -54,6 +54,7 @@ This README provides an overview of the project’s setup, configuration, and us
 - [Coming Soon] Reinforcement learning based navigation and obstacle avoidance.
 
 ## Project Goals
+- **Readiness Level**: Identify the readiness level of an autonomous mower and the feasibility of its integration with current operations.
 - **Real-World Testsites**: Generate real-world locations for simulation testing to target improvements to sim2real transfers.
 - **Autonomous Navigation**: Enable autonomous mower research to navigate roadsides using GPS, IMU, and a coupled obstacle detection sensor.
 - **Obstacle Detection**: Implement obstacle detection methods with an advanced sensor suite.
