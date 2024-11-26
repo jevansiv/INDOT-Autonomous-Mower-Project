@@ -6,7 +6,7 @@ Welcome to the **ROWMow Sim**! This project targets development of autonomous mo
 
 ---
 ## Disclaimer
-Per [Fab's end-user license agreement](https://www.fab.com/eula), distribution must go through communications for collaborators to utilize content in good faith. 
+Per Fab's [end-user license agreement](https://www.fab.com/eula), distribution must go through communications for collaborators to utilize content in good faith. 
 
 "5(a): **Sharing of Content**. Under a Standard License, you may not Distribute Content on a standalone basis to third parties except to your collaborators (either directly or through a third-party repository) who are utilizing the Content in good faith to develop a Project with you or on your behalf. This means, for example, that you may share Content with your employees, affiliates, and contractors in a private online repository while you work on a Project together. Those collaborators you share Content with are not permitted to further Distribute the Content (including as incorporated in a Project) and must delete the Content once it is no longer needed for developing a Project with you or on your behalf. You are responsible for ensuring that any third parties you share Content with comply with the terms of this Agreement. You are solely liable for any violation of this Agreement by collaborators with respect to any Content you share."
 
