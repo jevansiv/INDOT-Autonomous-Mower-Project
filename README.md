@@ -64,13 +64,14 @@ This README provides an overview of the project’s setup, configuration, and us
 
 ## Features
 - **Real-time Navigation**: Uses custom user developed **Nav2** or **RL** methods for autonomous path planning and obstacle avoidance.
-- **Sensor Fusion**: Combines data from sensors for positioning and navigation with adjustable sampling rates and noise.
+- **Sensor Fusion**: Combines data from sensors for localization and navigation with adjustable sampling rates and noise.
 - **Data Recording**: Logs relevant data for later analysis and debugging.
 - **Simulation Support**: Offers a high-fidelity Unreal Engine 5.1 simulation for development and testing of vegetation management platforms in a virtual environment.
 
 ## Installation
 
 ### Prerequisites
+- Ubuntu 22.04 (Could work on other versions but has not been tested)
 - Minimum 75 GB of available storage on SSD
 - [ROS2](https://docs.ros.org/en/galactic/index.html) (Recommended Distro from rclUE plugin: Humble)
 - Python 3.8+
@@ -94,7 +95,7 @@ The following are recommended Marketplace assets for advanced vehicle configurat
 ## Usage
 ### First Time Using Simulation:
 To build the Unreal Engine project:
-  - Open the Unreal Engine project's workspace in vscode
+  - Open the Unreal Engine project's workspace in Visual Studio Code (vscode)
   - Identify and click-on the "Run and Debug" Tab (Left-Hand-Side)
   - Navigate to the "RUN AND DEBUG" drop down menu at the top of the application and select "Generate Project Files (UE5)" from the item list
   - Press the green arrow button to run the project generation
@@ -106,13 +107,16 @@ To test in a simulated environment:
 - **Implement the mowing vehicle into the environment if platform does not already exist in environment**
   - Set the autopossess player to player 0 from disabled if it is disabled
 - **Play the simulated environment**
+#### Running Nav2
 - **Launch the external ros2 connection for the GPS sensor in a terminal:**
 ```
+source /opt/ros/humble/setup.bash
 source ~/oscar_ros/install/setup.bash
 ros2 launch oscar_ros launch_sim_gps.launch.py
 ```
 - **Launch the external Nav2 controller in a terminal:**
 ```
+source /opt/ros/humble/setup.bash
 source ~/oscar_ros_ws/install/setup.bash
 cd ~/oscar_ros_ws/src/oscar_ros/config/sim
 ros2 launch nav2_bringup bringup_launch.py params_file:=./<nav2_param_yaml_file>.yaml map:=../../maps/<map_yaml_file>.yaml use_sim_time:= true
@@ -123,6 +127,7 @@ ros2 launch nav2_bringup bringup_launch.py params_file:=./nav2_params_pcloud.yam
 ```
 - **Launch RViz2 for visualized view of robot's inputs and outputs:**
 ```
+source /opt/ros/humble/setup.bash
 source ~/oscar_ros/install/setup.bash
 rviz2
 ```
@@ -136,12 +141,22 @@ python3 <waypoint_publisher_file>.py
 - **Recording Data**
   - To record a rosbag of sensor data:
 ```
+source /opt/ros/humble/setup.bash
 source ~/oscar_ros_ws/install/setup.bash
 ros2 bag record --all
 ```
   - To record simulation data at end of test:
     - Ensure you are the active as the player in Unreal Engine, F8 to change between, and press "R" on the keyboard.
       - A printout statement confirming that data has been generated should appear on the screen
+#### Running RL
+To run the RL script, a python script that takes in the RGB camera inputs from a ROS2 subscriber and determines desired motor ouptuts published on a ROS2 publisher must be executed.
+```
+source /opt/ros/humble/setup.bash
+ros2 bag record --all
+cd </path/to/obstacle_avoid_nn>
+python3 obstacle_avoid_nn.py
+```
+
    
 ### Real-world deployment (Example Demonstrations with OSCAR Platform):
 Testing the virtual model developments in the real-world:
@@ -153,6 +168,7 @@ Testing the virtual model developments in the real-world:
       - Always good to double check as well! 
   - **Install the navigation package for the robot onto the onboard computer** (i.e., oscar_ros)
 
+#### Running Nav2
 - **Launch the IMU in a new terminal (ZED IMU used):**
 ```
 source ~/oscar_ros_ws/install/setup.bash
@@ -208,6 +224,8 @@ python3 <waypoint_publisher_file>.py
 source ~/oscar_ros_ws/install/setup.bash
 ros2 bag record --all
 ```
+
+#### Running RL
 
 ## Project Structure
 **Unreal Project:** Contains virtual environments, vehicle models, and sensors for developing navigation methods in specific environments and scenarios. This is where your testbed can be augmented for evaluating a vehicle's autonomy to safely navigate within a desired mowing coverage region. Vehicle models include the Evans' lab open-source connected autonomous rover (OSCAR) and RC Mower TK-44E build. Developer's can model and import their own vehicles to this project.
