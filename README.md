@@ -299,7 +299,7 @@ A safety report summary example can be observed in Files/Supplement_Material.doc
 We welcome contributions! To become a collaborator with the full ROWMow Sim package, please contact one of the individuals listed in the [disclaimer](#disclaimer). Only collaborators are able to receive access to the full version. Open contribution from third-parties is not permitted due to Fab's [EULA](https://www.fab.com/eula).
 
 ## Reporting Issues
-If you encounter any issues, feel free to open a GitHub Issue on our private GitHub Repository.
+If you encounter any issues, feel free to open a GitHub Issue on our GitHub Repository.
 
 ## Code of Conduct
 Collaborators are not allowed to distribute this project to third-parties and may not export models that were provided from Fab, Unreal Engine Marketplace, and Quixel Megascans for external productions.
