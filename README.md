@@ -15,6 +15,10 @@ Contacts for communications to become a collaborator are as follows:
 - Owner: Matt Kraushar - mkraushar@indot.in.gov
 - Owner: Greg Shaver - gshaver@purdue.edu
 - Developer: Michael Mardikes - mmardike@purdue.edu
+- Developer: Nathan Sprague - nspragu@purdue.edu
+- Developer: TJ Wiegman - wiegman@purdue.edu
+- Developer: Ethan Brown - brow1633@purdue.edu
+- Developer: Shreyas Supe - ssupe@purdue.edu
 
 ---
 ## Table of Contents
