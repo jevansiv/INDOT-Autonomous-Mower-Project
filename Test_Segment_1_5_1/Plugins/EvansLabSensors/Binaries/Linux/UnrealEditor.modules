@@ -1,0 +1,7 @@
+{
+	"BuildId": "1e723ceb-f30f-4d84-95e9-3af34bdf9b74",
+	"Modules": 
+	{
+		"EvansLabSensors": "libUnrealEditor-EvansLabSensors.so"
+	}
+}

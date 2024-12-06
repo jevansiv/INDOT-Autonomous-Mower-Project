@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"name": "ROWMowSim_Open",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/home/evanslab/UnrealEngine-5.1"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"files.associations": {
+			"exception": "cpp"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
+		]
+	}
+}
