@@ -1,24 +1,8 @@
 # ROWMow Sim: Digital-Twin Autonomous Roadside Mowing Simulator
 
-Welcome to the **ROWMow Sim**! This project targets development of autonomous mowing system to assist in efficient and safe maintenance of roadside vegetation. The work was funded by Indiana Department of Transportation through the Joint Transportation Research Program and targeted to Indiana roadways for vegetation management.
+Welcome to the **ROWMow Sim**! ROWMow Sim was developed by the Evans Lab at Purdue University for studying autonomous mowers. This project specifically targets the development and assessment of autonomous mowing system to assist in efficient and safe maintenance of roadside vegetation. The work was funded by Indiana Department of Transportation through the Joint Transportation Research Program and targeted to Indiana roadways for vegetation management.
 
 ![Project Banner](Images/UE_vehicles.png) <!-- Optional: Add an image banner or logo here -->
-
----
-## Disclaimer
-Per Fab's [end-user license agreement](https://www.fab.com/eula), distribution must go through communications for collaborators to utilize content in good faith. 
-
-"5(a): **Sharing of Content**. Under a Standard License, you may not Distribute Content on a standalone basis to third parties except to your collaborators (either directly or through a third-party repository) who are utilizing the Content in good faith to develop a Project with you or on your behalf. This means, for example, that you may share Content with your employees, affiliates, and contractors in a private online repository while you work on a Project together. Those collaborators you share Content with are not permitted to further Distribute the Content (including as incorporated in a Project) and must delete the Content once it is no longer needed for developing a Project with you or on your behalf. You are responsible for ensuring that any third parties you share Content with comply with the terms of this Agreement. You are solely liable for any violation of this Agreement by collaborators with respect to any Content you share."
-
-Contacts for communications to become a collaborator are as follows:
-- Primary Owner: John Evans - jevansiv@purdue.edu
-- Owner: Matt Kraushar - mkraushar@indot.in.gov
-- Owner: Greg Shaver - gshaver@purdue.edu
-- Developer: Michael Mardikes - mmardike@purdue.edu
-- Developer: Nathan Sprague - nspragu@purdue.edu
-- Developer: TJ Wiegman - wiegman@purdue.edu
-- Developer: Ethan Brown - brow1633@purdue.edu
-- Developer: Shreyas Supe - ssupe@purdue.edu
 
 ---
 ## Table of Contents
@@ -32,10 +16,9 @@ Contacts for communications to become a collaborator are as follows:
 - [Custom Vehicle Setup](#custom-vehicle-setup)
 - [Sensor Setup](#sensor-setup)
 - [Data Collection](#data-collection)
-- [Configuration](#configuration)
 - [Results](#results)
 - [Contributing](#contributing)
-- [License](#license)
+- [Disclaimer](#disclaimer)
 
 ---
 
@@ -265,7 +248,7 @@ A custom vehicle can be imported and configured in ROWMow Sim. To do this, the f
 **Note:** Advanced models (e.g., tractor with flex-wing mower) require [Advanced Vehicle System](https://www.fab.com/listings/e1457ad1-297b-4a70-aecb-5c6716d9494f) plugin.
 
 ## Sensor Setup
-Sensors are blueprints in the content browser that can be pulled into the vehicle and configured in the vehicle's blueprint for ROS2 configuration. OSCAS's blueprint can be used for reference to develop custom configurations. These sensors were developed upon [rclUE](https://github.com/rapyuta-robotics/rclUE/tree/UE5_devel_humble) and [RapyutaSimulationPlugins](https://github.com/rapyuta-robotics/RapyutaSimulationPlugins/tree/devel) with added sensor types and noise modeling.
+Sensors are blueprints in the content browser that can be pulled into the vehicle and configured in the vehicle's blueprint for ROS2 configuration. OSCAS's blueprint can be used for reference to develop custom configurations. These sensors were developed upon [rclUE](https://github.com/rapyuta-robotics/rclUE/tree/UE5_devel_humble) and [RapyutaSimulationPlugins](https://github.com/rapyuta-robotics/RapyutaSimulationPlugins/tree/devel) with added sensor types and stochastic noise modeling.
 
 ### Sensor options:
  - GPS
@@ -285,6 +268,8 @@ This project includes modules for recording sensor data:
 - **ROS2 Bag:** Record all relevant topics, excluding unnecessary topics.
 - **CSV Logging:** Logs GPS, terrain, road entries, and collisions in CSV format for post-analysis.
 
+The command for CSV logging inside of the ROWMow Sim simulation for developed vehicle platforms is the keyboard command "R" when playing as the active player of that vehicle. Ensure you set the desired vehicle as active and that the "R" command writes a csv log to a desired directory.
+
 ## Results
 Here, you can detail the experimental results of your autonomous mower:
 
@@ -303,4 +288,20 @@ If you encounter any issues, feel free to open a GitHub Issue on our GitHub Repo
 
 ## Code of Conduct
 Collaborators are not allowed to distribute this project to third-parties and may not export models that were provided from Fab, Unreal Engine Marketplace, and Quixel Megascans for external productions.
+
+## Disclaimer
+Per Fab's [end-user license agreement (EULA)](https://www.fab.com/eula), distribution must go through communications for collaborators to utilize content in good faith. The open version removes assets limited by Fab's EULA for improving outreach and impact for developers.
+
+"5(a): **Sharing of Content**. Under a Standard License, you may not Distribute Content on a standalone basis to third parties except to your collaborators (either directly or through a third-party repository) who are utilizing the Content in good faith to develop a Project with you or on your behalf. This means, for example, that you may share Content with your employees, affiliates, and contractors in a private online repository while you work on a Project together. Those collaborators you share Content with are not permitted to further Distribute the Content (including as incorporated in a Project) and must delete the Content once it is no longer needed for developing a Project with you or on your behalf. You are responsible for ensuring that any third parties you share Content with comply with the terms of this Agreement. You are solely liable for any violation of this Agreement by collaborators with respect to any Content you share."
+
+Contacts for communications to become a collaborator are as follows:
+- Primary Owner: John Evans - jevansiv@purdue.edu
+- Owner: Matt Kraushar - mkraushar@indot.in.gov
+- Owner: Greg Shaver - gshaver@purdue.edu
+- Developer: Michael Mardikes - mmardike@purdue.edu
+- Developer: Nathan Sprague - nspragu@purdue.edu
+- Developer: TJ Wiegman - wiegman@purdue.edu
+- Developer: Ethan Brown - brow1633@purdue.edu
+- Developer: Shreyas Supe - ssupe@purdue.edu
+
 
